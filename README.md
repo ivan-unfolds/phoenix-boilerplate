@@ -1,5 +1,17 @@
 # Boilerplate
 
+## Why
+
+Starting lots of new projects, it starts to get tiring repeating project setup.
+
+## What
+
+Boilerplate code for `Phoenix` 1.3.0 app, using `Tachyons` for CSS.
+`Elm` setup will be up shortly on a different branch.
+
+
+## Phoenix
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
