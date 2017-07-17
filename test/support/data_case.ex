@@ -1,4 +1,4 @@
-defmodule WidgetSpike.DataCase do
+defmodule Boilerplate.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule WidgetSpike.DataCase do
 
   using do
     quote do
-      alias WidgetSpike.Repo
+      alias Boilerplate.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import WidgetSpike.DataCase
+      import Boilerplate.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(WidgetSpike.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Boilerplate.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(WidgetSpike.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Boilerplate.Repo, {:shared, self()})
     end
 
     :ok

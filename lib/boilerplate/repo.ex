@@ -1,5 +1,5 @@
-defmodule WidgetSpike.Repo do
-  use Ecto.Repo, otp_app: :widget_spike
+defmodule Boilerplate.Repo do
+  use Ecto.Repo, otp_app: :boilerplate
 
   @doc """
   Dynamically loads the repository url from the

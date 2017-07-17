@@ -1,4 +1,4 @@
-defmodule WidgetSpike.Web.ErrorHelpers do
+defmodule Boilerplate.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule WidgetSpike.Web.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(WidgetSpike.Web.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Boilerplate.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(WidgetSpike.Web.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Boilerplate.Web.Gettext, "errors", msg, opts)
     end
   end
 end

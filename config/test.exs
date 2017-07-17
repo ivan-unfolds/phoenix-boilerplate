@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :widget_spike, WidgetSpike.Web.Endpoint,
+config :boilerplate, Boilerplate.Web.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :widget_spike, WidgetSpike.Web.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :widget_spike, WidgetSpike.Repo,
+config :boilerplate, Boilerplate.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "widget_spike_test",
+  database: "boilerplate_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

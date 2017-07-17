@@ -1,4 +1,4 @@
-# WidgetSpike
+# Boilerplate
 
 To start your Phoenix server:
 

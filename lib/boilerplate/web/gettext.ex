@@ -1,11 +1,11 @@
-defmodule WidgetSpike.Web.Gettext do
+defmodule Boilerplate.Web.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import WidgetSpike.Web.Gettext
+      import Boilerplate.Web.Gettext
 
       # Simple translation
       gettext "Here is the string to translate"
@@ -20,5 +20,5 @@ defmodule WidgetSpike.Web.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :widget_spike
+  use Gettext, otp_app: :boilerplate
 end

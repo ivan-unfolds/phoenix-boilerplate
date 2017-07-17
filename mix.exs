@@ -1,8 +1,8 @@
-defmodule WidgetSpike.Mixfile do
+defmodule Boilerplate.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :widget_spike,
+    [app: :boilerplate,
      version: "0.0.1",
      elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -16,7 +16,7 @@ defmodule WidgetSpike.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {WidgetSpike.Application, []},
+    [mod: {Boilerplate.Application, []},
      extra_applications: [:logger, :runtime_tools]]
   end
 

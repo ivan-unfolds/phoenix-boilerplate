@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :widget_spike, WidgetSpike.Web.Endpoint,
+config :boilerplate, Boilerplate.Web.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -31,13 +31,13 @@ config :widget_spike, WidgetSpike.Web.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :widget_spike, WidgetSpike.Web.Endpoint,
+config :boilerplate, Boilerplate.Web.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/widget_spike/web/views/.*(ex)$},
-      ~r{lib/widget_spike/web/templates/.*(eex)$}
+      ~r{lib/boilerplate/web/views/.*(ex)$},
+      ~r{lib/boilerplate/web/templates/.*(eex)$}
     ]
   ]
 
@@ -49,10 +49,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :widget_spike, WidgetSpike.Repo,
+config :boilerplate, Boilerplate.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "widget_spike_dev",
+  database: "boilerplate_dev",
   hostname: "localhost",
   pool_size: 10

@@ -1,4 +1,4 @@
-defmodule WidgetSpike.Web.ConnCase do
+defmodule Boilerplate.Web.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule WidgetSpike.Web.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import WidgetSpike.Web.Router.Helpers
+      import Boilerplate.Web.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint WidgetSpike.Web.Endpoint
+      @endpoint Boilerplate.Web.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(WidgetSpike.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Boilerplate.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(WidgetSpike.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Boilerplate.Repo, {:shared, self()})
     end
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end

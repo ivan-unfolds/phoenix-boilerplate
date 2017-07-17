@@ -1,4 +1,4 @@
 ExUnit.start()
 
-Ecto.Adapters.SQL.Sandbox.mode(WidgetSpike.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(Boilerplate.Repo, :manual)
 

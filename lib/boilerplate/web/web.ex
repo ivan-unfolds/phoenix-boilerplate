@@ -1,12 +1,12 @@
-defmodule WidgetSpike.Web do
+defmodule Boilerplate.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use WidgetSpike.Web, :controller
-      use WidgetSpike.Web, :view
+      use Boilerplate.Web, :controller
+      use Boilerplate.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -18,17 +18,17 @@ defmodule WidgetSpike.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: WidgetSpike.Web
+      use Phoenix.Controller, namespace: Boilerplate.Web
       import Plug.Conn
-      import WidgetSpike.Web.Router.Helpers
-      import WidgetSpike.Web.Gettext
+      import Boilerplate.Web.Router.Helpers
+      import Boilerplate.Web.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/widget_spike/web/templates",
-                        namespace: WidgetSpike.Web
+      use Phoenix.View, root: "lib/boilerplate/web/templates",
+                        namespace: Boilerplate.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -36,9 +36,9 @@ defmodule WidgetSpike.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import WidgetSpike.Web.Router.Helpers
-      import WidgetSpike.Web.ErrorHelpers
-      import WidgetSpike.Web.Gettext
+      import Boilerplate.Web.Router.Helpers
+      import Boilerplate.Web.ErrorHelpers
+      import Boilerplate.Web.Gettext
     end
   end
 
@@ -53,7 +53,7 @@ defmodule WidgetSpike.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import WidgetSpike.Web.Gettext
+      import Boilerplate.Web.Gettext
     end
   end
 

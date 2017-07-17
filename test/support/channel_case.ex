@@ -1,4 +1,4 @@
-defmodule WidgetSpike.Web.ChannelCase do
+defmodule Boilerplate.Web.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule WidgetSpike.Web.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint WidgetSpike.Web.Endpoint
+      @endpoint Boilerplate.Web.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(WidgetSpike.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Boilerplate.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(WidgetSpike.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Boilerplate.Repo, {:shared, self()})
     end
     :ok
   end

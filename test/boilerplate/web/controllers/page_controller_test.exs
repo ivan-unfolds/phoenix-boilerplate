@@ -1,5 +1,5 @@
-defmodule WidgetSpike.Web.PageControllerTest do
-  use WidgetSpike.Web.ConnCase
+defmodule Boilerplate.Web.PageControllerTest do
+  use Boilerplate.Web.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"

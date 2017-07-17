@@ -1,14 +1,14 @@
-defmodule WidgetSpike.Web.Endpoint do
-  use Phoenix.Endpoint, otp_app: :widget_spike
+defmodule Boilerplate.Web.Endpoint do
+  use Phoenix.Endpoint, otp_app: :boilerplate
 
-  socket "/socket", WidgetSpike.Web.UserSocket
+  socket "/socket", Boilerplate.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :widget_spike, gzip: false,
+    at: "/", from: :boilerplate, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -35,10 +35,10 @@ defmodule WidgetSpike.Web.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_widget_spike_key",
+    key: "_boilerplate_key",
     signing_salt: "r/0bPsEC"
 
-  plug WidgetSpike.Web.Router
+  plug Boilerplate.Web.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

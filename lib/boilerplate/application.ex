@@ -1,4 +1,4 @@
-defmodule WidgetSpike.Application do
+defmodule Boilerplate.Application do
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
@@ -9,16 +9,16 @@ defmodule WidgetSpike.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(WidgetSpike.Repo, []),
+      supervisor(Boilerplate.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(WidgetSpike.Web.Endpoint, []),
-      # Start your own worker by calling: WidgetSpike.Worker.start_link(arg1, arg2, arg3)
-      # worker(WidgetSpike.Worker, [arg1, arg2, arg3]),
+      supervisor(Boilerplate.Web.Endpoint, []),
+      # Start your own worker by calling: Boilerplate.Worker.start_link(arg1, arg2, arg3)
+      # worker(Boilerplate.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: WidgetSpike.Supervisor]
+    opts = [strategy: :one_for_one, name: Boilerplate.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end

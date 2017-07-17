@@ -1,5 +1,5 @@
-defmodule WidgetSpike.Web.ErrorView do
-  use WidgetSpike.Web, :view
+defmodule Boilerplate.Web.ErrorView do
+  use Boilerplate.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

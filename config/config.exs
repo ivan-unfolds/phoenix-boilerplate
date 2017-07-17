@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :widget_spike,
-  ecto_repos: [WidgetSpike.Repo]
+config :boilerplate,
+  ecto_repos: [Boilerplate.Repo]
 
 # Configures the endpoint
-config :widget_spike, WidgetSpike.Web.Endpoint,
+config :boilerplate, Boilerplate.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "5zz4cvDmqtYMX7s6GEfK9ZweW6jTYtMvYP1jhx1KQwPIi33IfXv2ESo1w2IWUxaq",
-  render_errors: [view: WidgetSpike.Web.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: WidgetSpike.PubSub,
+  render_errors: [view: Boilerplate.Web.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Boilerplate.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
