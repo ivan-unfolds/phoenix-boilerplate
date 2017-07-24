@@ -19,3 +19,8 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+import elmApp from './elm.js'
+import elmEmbed from './elm-embed.js'
+
+elmEmbed.init(elmApp)
